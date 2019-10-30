@@ -1,5 +1,6 @@
 # Build output:
-lib/
+/lib/
+/src/types/types.js
 /types.js
 
 # Package managers:

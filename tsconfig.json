@@ -5,7 +5,7 @@
     "emitDeclarationOnly": true,
 
     "esModuleInterop": true,
-    "lib": ["es2015"],
+    // "lib": ["es2015"],
     "module": "es2015",
     "moduleResolution": "node",
     "target": "es2015",
