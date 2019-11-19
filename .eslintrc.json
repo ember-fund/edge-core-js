@@ -3,12 +3,17 @@
     "standard-kit/prettier",
     "standard-kit/prettier/node",
     "standard-kit/prettier/jsx",
-    "standard-kit/prettier/flow"
+    "standard-kit/prettier/flow",
+    "standard-kit/prettier/typescript"
   ],
-  "plugins": [ "simple-import-sort"],
+  "parserOptions": {
+    "project": "tsconfig.json"
+  },
+  "plugins": [
+    "simple-import-sort"
+  ],
   "rules": {
     "no-var": "error",
-    "import/extensions": ["error", "always", { "ignorePackages": true }],
     "simple-import-sort/sort": "error"
   }
 }
