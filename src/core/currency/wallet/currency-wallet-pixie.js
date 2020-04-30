@@ -68,11 +68,18 @@ export const walletPixie: TamePixie<CurrencyWalletProps> = combinePixies({
 
   // Creates the engine for this wallet:
   engine: (input: CurrencyWalletInput) => async () => {
+
+    debugger
     if (!input.props.selfOutput) return
 
     const walletInfo = input.props.selfState.walletInfo
     const plugin = input.props.selfOutput.plugin
     if (!plugin) return
+
+    if (walletInfo.id === 'D1ow/pMAow5THeM1qNaTGgpEbY29mG/uzs1e7txuO2U=') {
+      debugger
+    }
+
 
     try {
       // Start the data sync:
@@ -142,6 +149,7 @@ export const walletPixie: TamePixie<CurrencyWalletProps> = combinePixies({
         payload: { height, walletId: input.props.id }
       })
     } catch (e) {
+      debugger
       input.props.onError(e)
       input.props.dispatch({ type: 'CURRENCY_ENGINE_FAILED', payload: e })
     }
